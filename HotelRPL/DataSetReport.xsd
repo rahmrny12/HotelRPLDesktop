@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetReport" targetNamespace="http://tempuri.org/DataSetReport.xsd" xmlns:mstns="http://tempuri.org/DataSetReport.xsd" xmlns="http://tempuri.org/DataSetReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=DESKTOP-89MUICP\LKSITSOFTWARE;Initial Catalog=DB_HOTEL_RPL_2;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="DB_HOTEL_RPL_2ConnectionString" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewReportTableAdapter" GeneratorDataComponentClassName="ViewReportTableAdapter" Name="ViewReport" UserDataComponentName="ViewReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_HOTEL_RPL_2ConnectionString" DbObjectName="DB_HOTEL_RPL_2.dbo.ViewReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, DateTime, BookingCode, Name, Expr1, RoomNumber, RoomPrice, CheckInDateTime, CheckOutDateTime, DurationNights FROM dbo.ViewReport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="DateTime" DataSetColumn="DateTime" />
+              <Mapping SourceColumn="BookingCode" DataSetColumn="BookingCode" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="RoomType" />
+              <Mapping SourceColumn="RoomNumber" DataSetColumn="RoomNumber" />
+              <Mapping SourceColumn="RoomPrice" DataSetColumn="RoomPrice" />
+              <Mapping SourceColumn="CheckInDateTime" DataSetColumn="CheckInDateTime" />
+              <Mapping SourceColumn="CheckOutDateTime" DataSetColumn="CheckOutDateTime" />
+              <Mapping SourceColumn="DurationNights" DataSetColumn="DurationNights" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetReport" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewReport" msprop:Generator_RowClassName="ViewReportRow" msprop:Generator_RowEvHandlerName="ViewReportRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewReportRowDeleted" msprop:Generator_RowDeletingName="ViewReportRowDeleting" msprop:Generator_RowEvArgName="ViewReportRowChangeEvent" msprop:Generator_TablePropName="ViewReport" msprop:Generator_RowChangedName="ViewReportRowChanged" msprop:Generator_UserTableName="ViewReport" msprop:Generator_RowChangingName="ViewReportRowChanging" msprop:Generator_TableClassName="ViewReportDataTable" msprop:Generator_TableVarName="tableViewReport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DateTime" msprop:Generator_UserColumnName="DateTime" msprop:Generator_ColumnPropNameInTable="DateTimeColumn" msprop:Generator_ColumnPropNameInRow="DateTime" msprop:Generator_ColumnVarNameInTable="columnDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BookingCode" msprop:Generator_UserColumnName="BookingCode" msprop:Generator_ColumnPropNameInTable="BookingCodeColumn" msprop:Generator_ColumnPropNameInRow="BookingCode" msprop:Generator_ColumnVarNameInTable="columnBookingCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomType" msprop:Generator_UserColumnName="RoomType" msprop:Generator_ColumnPropNameInTable="RoomTypeColumn" msprop:Generator_ColumnPropNameInRow="RoomType" msprop:Generator_ColumnVarNameInTable="columnRoomType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomNumber" msprop:Generator_UserColumnName="RoomNumber" msprop:Generator_ColumnPropNameInTable="RoomNumberColumn" msprop:Generator_ColumnPropNameInRow="RoomNumber" msprop:Generator_ColumnVarNameInTable="columnRoomNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomPrice" msprop:Generator_UserColumnName="RoomPrice" msprop:Generator_ColumnPropNameInTable="RoomPriceColumn" msprop:Generator_ColumnPropNameInRow="RoomPrice" msprop:Generator_ColumnVarNameInTable="columnRoomPrice" type="xs:int" />
+              <xs:element name="CheckInDateTime" msprop:Generator_UserColumnName="CheckInDateTime" msprop:Generator_ColumnPropNameInTable="CheckInDateTimeColumn" msprop:Generator_ColumnPropNameInRow="CheckInDateTime" msprop:Generator_ColumnVarNameInTable="columnCheckInDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CheckOutDateTime" msprop:Generator_UserColumnName="CheckOutDateTime" msprop:Generator_ColumnPropNameInTable="CheckOutDateTimeColumn" msprop:Generator_ColumnPropNameInRow="CheckOutDateTime" msprop:Generator_ColumnVarNameInTable="columnCheckOutDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DurationNights" msprop:Generator_UserColumnName="DurationNights" msprop:Generator_ColumnPropNameInTable="DurationNightsColumn" msprop:Generator_ColumnPropNameInRow="DurationNights" msprop:Generator_ColumnVarNameInTable="columnDurationNights" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewReport" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
